@@ -1,8 +1,9 @@
 --[[
 
 Neovim init file
-Maintainer: brainf+ck
-Website: https://github.com/brainfucksec/neovim-lua
+Maintainer: bibstha
+Website: https://github.com/bibstha/neovim
+Original Source: https://github.com/brainfucksec/neovim-lua
 
 --]]
 
