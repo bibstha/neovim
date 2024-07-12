@@ -60,10 +60,3 @@ map('n', '<leader>pf', ':lua require("fzf-lua").files()<CR>')
 map('n', '<Leader>pb', ':lua require("fzf-lua").buffers()<CR>')
 map('n', '<Leader>pg', ':lua require("fzf-lua").live_grep()<CR>')
 map('n', '<Leader>ca', ':lua require("fzf-lua").lsp_code_actions()<CR>')
-
--- copilot
-vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
-  expr = true,
-  replace_keycodes = false
-})
-vim.g.copilot_no_tab_map = true
