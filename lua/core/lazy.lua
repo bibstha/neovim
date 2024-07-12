@@ -118,10 +118,23 @@ lazy.setup({
       },
     },
 
-    -- Easy pane navigation within tmux
-    "christoomey/vim-tmux-navigator",
+    -- Easy pane navigation within tmux and kitty
+    -- "christoomey/vim-tmux-navigator",
+    {"knubie/vim-kitty-navigator", build = 'cp ./*.py ~/.config/kitty/'},
 
     -- FZF-Lua for Ctrl-P style navigation
-    "ibhagwan/fzf-lua"
+    "ibhagwan/fzf-lua",
+
+    -- Work with surround objects
+    {
+      "kylechui/nvim-surround",
+      version = "*", -- Use for stability; omit to use `main` branch for the latest features
+      event = "VeryLazy",
+      config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+      end
+    }
   },
 })
