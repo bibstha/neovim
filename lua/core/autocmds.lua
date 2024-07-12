@@ -90,9 +90,17 @@ local function set_background_from_macos_theme()
   end
 end
 set_background_from_macos_theme()
-vim.api.nvim_create_autocmd({"FocusGained", "CursorHold"}, {
+autocmd({'FocusGained', 'CursorHold'}, {
   callback = set_background_from_macos_theme,
-  group = augroup("MacosThemeCheck", { clear = true }),
+  group = augroup('MacosThemeCheck', { clear = true }),
+})
+
+-- Autoformat ruby files on save
+autocmd('BufWritePre', {
+  pattern = '*.rb',
+  callback = function()
+    vim.lsp.buf.format()
+  end,
 })
 
 
