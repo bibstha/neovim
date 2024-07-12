@@ -135,6 +135,10 @@ lazy.setup({
             -- Configuration here, or leave empty to use defaults
         })
       end
-    }
+    },
+
+    -- Copilot
+    'github/copilot.vim',
+
   },
 })

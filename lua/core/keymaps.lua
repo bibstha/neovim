@@ -59,3 +59,4 @@ map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
 map('n', '<leader>pf', ':lua require("fzf-lua").files()<CR>')
 map('n', '<Leader>pb', ':lua require("fzf-lua").buffers()<CR>')
 map('n', '<Leader>pg', ':lua require("fzf-lua").live_grep()<CR>')
+map('n', '<Leader>ca', ':lua require("fzf-lua").lsp_code_actions()<CR>')
