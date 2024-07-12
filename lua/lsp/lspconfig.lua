@@ -73,7 +73,7 @@ end
 -- see: `:help vim.diagnostic.config`
 -- Customizing how diagnostics are displayed
 vim.diagnostic.config({
-  update_in_insert = true,
+  update_in_insert = false,
   float = {
     focusable = false,
     style = "minimal",
@@ -85,9 +85,9 @@ vim.diagnostic.config({
 })
 
 -- Show line diagnostics automatically in hover window
-vim.cmd([[
-  autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, { focus = false })
-]])
+-- vim.cmd([[
+--   autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, { focus = false })
+-- ]])
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
