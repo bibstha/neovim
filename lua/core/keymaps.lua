@@ -60,3 +60,12 @@ map('n', '<leader>pf', ':lua require("fzf-lua").files()<CR>')
 map('n', '<Leader>pb', ':lua require("fzf-lua").buffers()<CR>')
 map('n', '<Leader>pg', ':lua require("fzf-lua").live_grep()<CR>')
 map('n', '<Leader>ca', ':lua require("fzf-lua").lsp_code_actions()<CR>')
+
+-- vim-test
+map("n", "<Leader>tn", "<cmd>TestNearest<cr>")
+map("n", "<Leader>tl", "<cmd>TestLast<cr>")
+map("n", "<Leader>tf", "<cmd>TestFile<cr>")
+
+-- famiu/bufdelete
+-- map bd to delete current buffer
+map('n', '<Leader>bd', ':lua require("bufdelete").bufdelete(0, true)<CR>')

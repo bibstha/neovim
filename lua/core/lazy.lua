@@ -140,5 +140,13 @@ lazy.setup({
     -- Copilot
     'github/copilot.vim',
 
+    -- vim-test to run Ruby tests
+    'vim-test/vim-test',
+
+    -- VIM Matchup provides more accurate matching based on nvim-treesitter
+    'andymass/vim-matchup',
+
+    -- Delete buffers
+    'famiu/bufdelete.nvim',
   },
 })
