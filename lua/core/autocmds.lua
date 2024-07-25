@@ -97,7 +97,7 @@ autocmd({'FocusGained', 'CursorHold'}, {
 
 -- Autoformat ruby files on save
 autocmd('BufWritePre', {
-  pattern = '*.rb',
+  pattern = '*.rb,*.rake',
   callback = function()
     vim.lsp.buf.format()
   end,
