@@ -43,6 +43,7 @@ lazy.setup({
     -- other colorschemes:
     { 'tanvirtin/monokai.nvim', lazy = true },
     { 'https://github.com/rose-pine/neovim', name = 'rose-pine', lazy = true },
+    { 'folke/tokyonight.nvim', lazy = false, priority = 1000, opts = {}},
 
     -- Icons
     { 'kyazdani42/nvim-web-devicons', lazy = true },
@@ -148,5 +149,24 @@ lazy.setup({
 
     -- Delete buffers
     'famiu/bufdelete.nvim',
+
+    -- NeoTest
+    {
+      "nvim-neotest/neotest",
+      dependencies = {
+        "nvim-neotest/nvim-nio",
+        "nvim-lua/plenary.nvim",
+        "antoinemadec/FixCursorHold.nvim",
+        "nvim-treesitter/nvim-treesitter",
+        "zidhuss/neotest-minitest",
+      },
+      config = function()
+        require("neotest").setup({
+          adapters = {
+            require("neotest-minitest")
+          },
+        })
+      end
+    },
   },
 })

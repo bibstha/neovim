@@ -10,6 +10,7 @@
 --   return
 -- end
 
-vim.g['test#strategy'] = 'neovim_sticky'
+-- vim.g['test#strategy'] = 'neovim_sticky'
+vim.g['test#strategy'] = 'wezterm'
 vim.g['test#neovim#start_normal'] = 0
 

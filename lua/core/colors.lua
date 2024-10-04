@@ -15,6 +15,7 @@ end
 -- rose-pine auto follows background=light and dark
 require('rose-pine').setup()
 vim.cmd.colorscheme('rose-pine')
+-- vim.cmd.colorscheme('tokyonight-day')
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "ruby",

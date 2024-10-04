@@ -28,6 +28,10 @@ capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   --vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+  if client.name == 'ruff_lsp' then
+    -- Disable hover in favor of Pyright
+    client.server_capabilities.hoverProvider = false
+  end
 
   -- Highlighting references.
   -- See: https://sbulav.github.io/til/til-neovim-highlight-references/
@@ -122,7 +126,8 @@ end
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches.
 -- Add your language server below:
-local servers = { 'bashls', 'pyright', 'clangd', 'html', 'cssls', 'tsserver', 'ruby_lsp' }
+-- local servers = { 'bashls', 'pyright', 'clangd', 'html', 'cssls', 'tsserver', 'ruby_lsp' }
+local servers = { 'bashls', 'pyright', 'ruff', 'clangd', 'html', 'cssls', 'ts_ls', 'ruby_lsp' }
 
 -- Call setup
 for _, lsp in ipairs(servers) do

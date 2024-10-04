@@ -66,6 +66,9 @@ map("n", "<Leader>tn", "<cmd>TestNearest<cr>")
 map("n", "<Leader>tl", "<cmd>TestLast<cr>")
 map("n", "<Leader>tf", "<cmd>TestFile<cr>")
 
+-- neotest
+map("n", "<Leader>xn", ':lua require("neotest").run.run()<CR>')
+
 -- famiu/bufdelete
 -- map bd to delete current buffer
 map('n', '<Leader>bd', ':lua require("bufdelete").bufdelete(0, true)<CR>')
